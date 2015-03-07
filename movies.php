@@ -1,6 +1,3 @@
-<!-- Formularz stworzony przy użyciu generatora ze strony:
-http://www.webformgenerator.eu/webformgenerator.php
---> 
 <h1>Filmy</h1>
 <hr/>
 <?php 
@@ -14,9 +11,9 @@ while ($r = $q->fetch()){
 
      ?>
 <div class="contentText">
-  <p>Tytuł: <?=$r['title']?></p>
+  <p>Tytuł: <b><?=$r['title']?></b></p>
 
-  <p>Cena:  <?=$r['price']?>$</p>
+  <p>Cena:  <b><?=$r['price']?></b>$</p>
  Opis:
   <blockquote><p> <?=$r['description']?></p>
   </blockquote>
