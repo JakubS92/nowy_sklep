@@ -2,7 +2,16 @@
 // start sesji
 // dzięki sesji będziemy mogli wiedzieć czy ktoś się zalogował czy nie
 session_start();
+// Na internecie jest instrukcja jak łączyć się z bazą przez PDO 
+ $db = new PDO('mysql:host=localhost;dbname=s168295;charset=utf8', "s168295", "FWRXvNNJ");
+
 ?>
+<!-- 
+
+Szablon strony pobrany z 
+http://www.quackit.com/html/templates/simple_website_templates.cfm
+
+-->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,7 +21,7 @@ session_start();
     <body>
         <div id="page">
             <?php
-            		// Złączamy pasek nawigacji
+            		// Załączamy pasek nawigacji
                     include("navigation.php");
             ?>
         </div>
@@ -36,7 +45,7 @@ session_start();
             	// jeśli nie jest zdefinowany to załaduj stronę domyślną
             	$page = "movies.php";
 
-            
+            	include($page);
             ?>
 
                 <div id="footer">
