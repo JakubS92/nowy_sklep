@@ -22,7 +22,7 @@ http://www.webformgenerator.eu/webformgenerator.php
                <input type="submit" value="Zaloguj">
           </div>
      </form>
-     <div>
+ 
 </div>
 
 <?php
