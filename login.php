@@ -49,6 +49,10 @@ $query->execute(array($login, $password));
 if ($query->fetchColumn() > 0) {
      // Ustawiamy dane sesji na zalogowanie
      $_SESSION['is_logged'] = true;
+
+     // dodatkowo jeśli jest to admin
+     if ($login == 'admin')
+          $_SESSION['is_admin'] = true;
 } else {
      echo "<script>alert('Błędne hasło lub login');</script>";
      return;
